@@ -1,0 +1,30 @@
+@import './fonts.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter';
+  --color-base-dark: #2c3e50;
+  --color-base-light: #f1f3f4;
+  --color-primary: #4a90e2;
+  --color-secondary: #a0d8f1;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.brand-fade-enter-active,
+.brand-fade-leave-active {
+  transition: opacity var(--default-transition-duration) var(--default-transition-timing-function);
+}
+
+.brand-fade-enter-from,
+.brand-fade-leave-to {
+  opacity: 0;
+}
